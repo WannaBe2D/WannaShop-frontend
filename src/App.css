@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.myTab{
+  color:black;
+}
+
+.myCard {
+  border-bottom: 1px solid #D3D4D5;
+  padding-bottom: 10px;
+}
+
+.myButmda {
+  position: absolute;
+  font-size: 24px;
+  visibility:hidden;
+  opacity:0;
+  transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 15px;
+}
+
+.showMyCard:hover .myButmda{
+  visibility:visible;
+  opacity:1;
+  transition-delay:0s;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 15px; 
+}
