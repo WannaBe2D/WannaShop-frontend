@@ -18,8 +18,8 @@ export default class CarouselBox extends Component {
                             <p className="d-none d-sm-block" style={{fontSize: '16px', lineHeight:'24px'}}>New colors to keep you moving</p>
                         </Carousel.Caption>
                         <Carousel.Caption style={{paddingBottom: '50px'}}>
-                            <Button size="lg" variant="light" style={{margin: '50px', fontSize: '14px', width: '180px'}} className="mb-0 mt-2" >SHOP MEN</Button>
-                            <Button size="lg" variant="light" style={{margin: '50px', fontSize: '14px', width: '180px'}} className="mb-0 mt-2">SHOP WOMEN</Button>
+                            <Button size="lg" variant="light" style={{margin: '50px', fontSize: '14px', width: '180px'}} className="mb-0 mt-2" href="/men">SHOP MEN</Button>
+                            <Button size="lg" variant="light" style={{margin: '50px', fontSize: '14px', width: '180px'}} className="mb-0 mt-2" href="/women">SHOP WOMEN</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
