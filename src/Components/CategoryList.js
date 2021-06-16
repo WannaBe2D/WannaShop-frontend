@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Container, Row, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function CategoryList({ match }) {
 
@@ -22,7 +23,6 @@ function CategoryList({ match }) {
     console.log(products)
     if(products.length == 0){
         return <div>loading...</div>
-        console.log("MDA")
     }
     const productJSX = products.map((prod, i) =>(
         <Card key={i} className="border-0 col-lg-3 col-md-4 col-sm-5">
@@ -30,6 +30,7 @@ function CategoryList({ match }) {
             <Card.Body>
                 <Card.Title>{prod.name}</Card.Title>
                 <Card.Text>${prod.price}</Card.Text>
+                <Link to={{pathname:`/products/${prod.id}/`}}>Detail</Link>
             </Card.Body>
         </Card>
     ))

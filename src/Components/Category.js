@@ -22,7 +22,7 @@ function Category(){
                 <ListGroup horizontal>
                     {category.map(element => (
                         <ListGroup.Item key={element.id} className="border-0">
-                            <Link to={{pathname:`/category/${element.id}`}} style={{color: "black"}}>{element.name}</Link>
+                            <Link to={{pathname:`/category/${element.id}/`}} style={{color: "black"}}>{element.name}</Link>
                         </ListGroup.Item>
                     ))}
                 </ListGroup>
