@@ -1,15 +1,20 @@
-import React, { Component } from 'react';
-import { CardGroup, Card, Container, Row } from 'react-bootstrap'
+import React, { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Category from '../Components/Category';
+import CategoryList from '../Components/CategoryList';
 
-class Men extends Component {
-    render(){
-        return ( 
-           <>
-            <Category />
-           </>
-         );
-    }
+function Men(){
+    return(
+        <div>
+            <Router>
+                <Category />
+                <Switch>
+                    <Route path="/category/:id" exact component={CategoryList} /> 
+                </Switch>
+            </Router>
+        </div>
+    )
 }
- 
+
 export default Men;
