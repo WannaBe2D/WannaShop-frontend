@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Category from '../Components/Category';
 import CategoryList from '../Components/CategoryList';
 import ProductDetail from '../Components/ProductDetail';
+import Footer from '../Components/Footer';
 
 function Men(){
     return(
@@ -15,6 +16,7 @@ function Men(){
                     <Route path="/category/:id" exact component={CategoryList} /> 
                 </Switch>
             </Router>
+            <Footer />
         </div>
     )
 }
