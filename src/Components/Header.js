@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Home from '../Pages/Home';
 import Men from '../Pages/Men';
 import Women from '../Pages/Women';
+import Auth from '../Pages/Auth';
 
 export default class Header extends Component {
     render(){
@@ -12,8 +13,8 @@ export default class Header extends Component {
                 <Navbar collapseOnSelect expand="md" bg="light" variant="light">
                     <Nav className="mr-auto">
                         <Navbar.Collapse id="responsive-navbar-nav1">
-                            <Nav.Link className="text-secondary" href="#home">Men</Nav.Link>
-                            <Nav.Link className="text-secondary" href="#features">Woman</Nav.Link>
+                            <Nav.Link className="text-secondary" href="/men">Men</Nav.Link>
+                            <Nav.Link className="text-secondary" href="/women">Woman</Nav.Link>
                         </Navbar.Collapse>
                     </Nav>
                     <Navbar.Brand className="mr-auto" href="/">
@@ -23,7 +24,7 @@ export default class Header extends Component {
                     </Navbar.Brand>
                         <Nav>
                             <Navbar.Collapse id="responsive-navbar-nav2">
-                                <Nav.Link className="text-secondary" href="#home">Account</Nav.Link>
+                                <Nav.Link className="text-secondary" href="/auth">Account</Nav.Link>
                                 <Nav.Link className="text-secondary" href="#features">Cart</Nav.Link>
                             </Navbar.Collapse>
                         </Nav>
@@ -35,6 +36,7 @@ export default class Header extends Component {
                         <Route exact path="/" component={Home} />
                         <Route exact path="/men" component={Men} />
                         <Route exact path="/women" component={Women} />
+                        <Route exact path="/auth" component={Auth} />
                     </Switch>
                 </Router>
             </div>

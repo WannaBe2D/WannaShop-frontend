@@ -1,23 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Container, Row, Card, Button } from 'react-bootstrap';
+import { Card, Row, Container, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-function CategoryList({ match }) {
-
-    const [category, setCategory] = useState({})
-    const id = match.params.id
+function AllProducts() {
+//<Link to={{pathname:`/products/${prod.id}/`}}>Detail</Link>
     const [products, setProducts] = useState([])
 
     useEffect(() => {
         axios({
             method: "GET",
-            url: `http://localhost:8000/api/categories/${id}/`,
+            url: `http://localhost:8000/api/products/`
         }).then(response => {
-            setCategory(response.data)
-            setProducts(response.data.products)
+            setProducts(response.data)
         })
-    }, [id])
+    }, [])
 
     let link = 'http://127.0.0.1:8000'
     console.log(products)
@@ -39,9 +36,8 @@ function CategoryList({ match }) {
         </Card>
     ))
 
-    return(
+    return (
         <Container>
-            <h3>{category.name}</h3>
             <Row className="mt-4">
                 {productJSX}
             </Row>
@@ -49,4 +45,4 @@ function CategoryList({ match }) {
     )
 }
 
-export default CategoryList;
+export default AllProducts;

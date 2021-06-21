@@ -26,8 +26,8 @@ class OurFavorites extends Component {
                                 <Card border="light" className="m-3 border-0 showMyCard">
                                     <Card.Img variant="top" src={cardImg1}/>
                                     <div className="myButmda">
-                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP MEN</Button>
-                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP WOMEN</Button>
+                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/men">SHOP MEN</Button>
+                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/women">SHOP WOMEN</Button>
                                     </div>
                                     <Card.Body>
                                         <Card.Title className="myCard">Tree Dasher</Card.Title>
@@ -37,8 +37,8 @@ class OurFavorites extends Component {
                                 <Card border="light" className="m-3 border-0 showMyCard">
                                     <Card.Img variant="top" src={cardImg2}/>
                                     <div className="myButmda">
-                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP MEN</Button>
-                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP WOMEN</Button>
+                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/men">SHOP MEN</Button>
+                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/women">SHOP WOMEN</Button>
                                     </div>
                                     <Card.Body>
                                         <Card.Title className="myCard">Tree Runner</Card.Title>
@@ -48,8 +48,8 @@ class OurFavorites extends Component {
                                 <Card border="light" className="m-3 border-0 showMyCard" variant="lig">
                                     <Card.Img variant="top" src={cardImg3}/>
                                     <div className="myButmda">
-                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP MEN</Button>
-                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP WOMEN</Button>
+                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/men">SHOP MEN</Button>
+                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/women">SHOP WOMEN</Button>
                                     </div>
                                     <Card.Body>
                                         <Card.Title className="myCard">Wool Runner</Card.Title>
@@ -63,8 +63,8 @@ class OurFavorites extends Component {
                                 <Card border="light" className="m-3 border-0 showMyCard">
                                     <Card.Img variant="top" src={shopCardImg1}/>
                                     <div className="myButmda">
-                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP MEN</Button>
-                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP WOMEN</Button>
+                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/men">SHOP MEN</Button>
+                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/women">SHOP WOMEN</Button>
                                     </div>
                                     <Card.Body>
                                         <Card.Title className="myCard">Tree Dasher</Card.Title>
@@ -74,8 +74,8 @@ class OurFavorites extends Component {
                                 <Card border="light" className="m-3 border-0 showMyCard">
                                     <Card.Img variant="top" src={shopCardImg2}/>
                                     <div className="myButmda">
-                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP MEN</Button>
-                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP WOMEN</Button>
+                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/men">SHOP MEN</Button>
+                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/women">SHOP WOMEN</Button>
                                     </div>
                                     <Card.Body>
                                         <Card.Title className="myCard">Tree Runner</Card.Title>
@@ -85,8 +85,8 @@ class OurFavorites extends Component {
                                 <Card border="light" className="m-3 border-0 showMyCard" variant="lig">
                                     <Card.Img variant="top" src={shopCardImg3}/>
                                     <div className="myButmda">
-                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP MEN</Button>
-                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP WOMEN</Button>
+                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/men">SHOP MEN</Button>
+                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/women">SHOP WOMEN</Button>
                                     </div>
                                     <Card.Body>
                                         <Card.Title className="myCard">Wool Runner</Card.Title>
@@ -100,8 +100,8 @@ class OurFavorites extends Component {
                                 <Card border="light" className="m-3 border-0 showMyCard">
                                     <Card.Img variant="top" src={cardImg1}/>
                                     <div className="myButmda">
-                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP MEN</Button>
-                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP WOMEN</Button>
+                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/men">SHOP MEN</Button>
+                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/women">SHOP WOMEN</Button>
                                     </div>
                                     <Card.Body>
                                         <Card.Title className="myCard">Tree Dasher</Card.Title>
@@ -111,8 +111,8 @@ class OurFavorites extends Component {
                                 <Card border="light" className="m-3 border-0 showMyCard">
                                     <Card.Img variant="top" src={cardImg2}/>
                                     <div className="myButmda">
-                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP MEN</Button>
-                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP WOMEN</Button>
+                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/men">SHOP MEN</Button>
+                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/women">SHOP WOMEN</Button>
                                     </div>
                                     <Card.Body>
                                         <Card.Title className="myCard">Tree Runner</Card.Title>
@@ -122,8 +122,8 @@ class OurFavorites extends Component {
                                 <Card border="light" className="m-3 border-0 showMyCard">
                                     <Card.Img variant="top" src={cardImg3}/>
                                     <div className="myButmda">
-                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP MEN</Button>
-                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>SHOP WOMEN</Button>
+                                        <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/men">SHOP MEN</Button>
+                                        <Button className="m-2" size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}} href="/women">SHOP WOMEN</Button>
                                     </div>
                                     <Card.Body>
                                         <Card.Title className="myCard">Wool Runner</Card.Title>
@@ -140,8 +140,8 @@ class OurFavorites extends Component {
                 <h3 className="text-center">Colorful By Nature</h3>
                 <p className="text-center">Merino Wool Shoes In Limited Edition Hues</p> 
                 <div className="d-flex justify-content-center">
-                    <Button className="m-3" variant="dark" style={{width: '180px', fontSize: '14px'}}>SHOP MEN</Button>
-                    <Button className="m-3" variant="dark" style={{width: '180px', fontSize: '14px'}}>SHOP WOMEN</Button>
+                    <Button className="m-3" variant="dark" style={{width: '180px', fontSize: '14px'}} href="/men">SHOP MEN</Button>
+                    <Button className="m-3" variant="dark" style={{width: '180px', fontSize: '14px'}} href="/women">SHOP WOMEN</Button>
                 </div>
             </div>
         );

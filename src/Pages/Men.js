@@ -5,6 +5,9 @@ import Category from '../Components/Category';
 import CategoryList from '../Components/CategoryList';
 import ProductDetail from '../Components/ProductDetail';
 import Footer from '../Components/Footer';
+import NewProduct from '../Components/NewProduct';
+import AllProducts from '../Components/AllProducts';
+
 
 function Men(){
     return(
@@ -13,7 +16,8 @@ function Men(){
                 <Category />
                 <Switch>
                     <Route path="/products/:id" exact component={ProductDetail} /> 
-                    <Route path="/category/:id" exact component={CategoryList} /> 
+                    <Route path="/category/:id" exact component={CategoryList} />
+                    <Route path="/men/" exact component={AllProducts} /> 
                 </Switch>
             </Router>
             <Footer />

@@ -43,12 +43,13 @@ function ProductDetail({ match }) {
                             />
                         </Carousel.Item>
                     </Carousel>
+
                     <div className="m-5">
                         <h3>{product.name}</h3>
-                        <p style={{borderBottom: "1px solid #E6E6EB"}}>{product.price}</p>
-                        <p>{product.description}</p>
-                        <Button variant="dark">ADD TO CARD</Button>
+                        <p>{product.price}</p>
+                        <Button variant="dark" className="rounded-0 btn-lg">ADD TO CARD</Button>
                     </div>
+
                 </div>
                 <div className="m-5">
                     <p>New Arrivals</p>
