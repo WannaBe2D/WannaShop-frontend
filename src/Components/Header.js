@@ -5,6 +5,8 @@ import Home from '../Pages/Home';
 import Men from '../Pages/Men';
 import Women from '../Pages/Women';
 import Auth from '../Pages/Auth';
+import Reg from '../Pages/Register';
+import Profile from '../Pages/Profile';
 
 export default class Header extends Component {
     render(){
@@ -36,7 +38,9 @@ export default class Header extends Component {
                         <Route exact path="/" component={Home} />
                         <Route exact path="/men" component={Men} />
                         <Route exact path="/women" component={Women} />
-                        <Route exact path="/auth" component={Auth} />
+                        <Route exact path="/login" component={Auth} />
+                        <Route exact path="/register" component={Reg} />
+                        <Route exact path="/profile" component={Profile} />
                     </Switch>
                 </Router>
             </div>

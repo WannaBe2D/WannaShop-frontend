@@ -37,10 +37,10 @@ function FormAuth() {
         e.preventDefault()
 
         const data = { username: username, password: password };
-        axios.post('http://127.0.0.1:8000/auth/token', data)
+        await axios.post('http://127.0.0.1:8000/auth/token', data)
             .then((response) => {
                 localStorage.setItem("Token", response.data.token)
-                history.push("/")
+                history.push("/profile")
             })
             .catch((error) => {
                 if (error.response) {
@@ -53,7 +53,7 @@ function FormAuth() {
         <Container>
                 <div className="m-5">
                     <h2>Log into Squarespace</h2>
-                    <p style={{color: "#D4D4CE"}}>or <a href="#" style={{borderBottom: "1px solid #D4D4CE", color:"#D4D4CE"}}>Create Account</a></p>
+                    <p style={{color: "#D4D4CE"}}>or <a href="/register" style={{borderBottom: "1px solid #D4D4CE", color:"#D4D4CE"}}>Create Account</a></p>
                 </div>
 
                 <Form style={{width:"300px", margin: "0 auto"}} onSubmit={handleSubmit}>
