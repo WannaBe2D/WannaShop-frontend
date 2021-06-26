@@ -1,31 +1,52 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom'
+import { useHistory } from "react-router-dom";
+
 
 async function SetTokenn(credentials) {
     const data = { username: credentials.username, password: credentials.password };
     axios.post('http://127.0.0.1:8000/auth/token', data)
-        .then(response => localStorage.setItem("Token", response.data.token))
+        .then((response) => {
+            localStorage.setItem("Token", response.data.token)
+        })
         .catch((error) => {
             if (error.response) {
-                console.log(error.response.status);
+                 console.log(error.response.status)
             }
         })
 }
 
 
 function FormAuth() {
+    const history = useHistory();
 
     const[username, setUsername] = useState()
     const[password, setPassword] = useState()
-
-    const handleSubmit = async e => {
+    
+    /*const handleSubmit = async e => {
         e.preventDefault()
         const token = await SetTokenn({
             username,
             password
         })
+        
+    }*/
+
+    const handleSubmit = async e => {
+        e.preventDefault()
+
+        const data = { username: username, password: password };
+        axios.post('http://127.0.0.1:8000/auth/token', data)
+            .then((response) => {
+                localStorage.setItem("Token", response.data.token)
+                history.push("/")
+            })
+            .catch((error) => {
+                if (error.response) {
+                    console.log(error.response.status)
+                }
+            })
     }
 
     return(
