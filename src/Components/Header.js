@@ -7,6 +7,7 @@ import Women from '../Pages/Women';
 import Auth from '../Pages/Auth';
 import Reg from '../Pages/Register';
 import Profile from '../Pages/Profile';
+import Cart from '../Pages/Cart';
 
 export default class Header extends Component {
     render(){
@@ -27,7 +28,7 @@ export default class Header extends Component {
                         <Nav>
                             <Navbar.Collapse id="responsive-navbar-nav2">
                                 <Nav.Link className="text-secondary" href="/profile">Account</Nav.Link>
-                                <Nav.Link className="text-secondary" href="#features">Cart</Nav.Link>
+                                <Nav.Link className="text-secondary" href="/cart">Cart</Nav.Link>
                             </Navbar.Collapse>
                         </Nav>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav1 responsive-navbar-nav2" />
@@ -41,6 +42,7 @@ export default class Header extends Component {
                         <Route exact path="/login" component={Auth} />
                         <Route exact path="/register" component={Reg} />
                         <Route exact path="/profile" component={Profile} />
+                        <Route exact path="/cart" component={Cart} />
                     </Switch>
                 </Router>
             </div>

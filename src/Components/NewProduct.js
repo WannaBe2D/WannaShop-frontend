@@ -18,12 +18,16 @@ function NewProduct() {
 
     let link = 'http://127.0.0.1:8000'
     const productJSX = products.map((prod, i) =>(
-        <Card key={prod.id} className="border-0 m-3" style={{cursor: 'pointer'}}>
+        <Card key={prod.id} className="border-0 m-3 showMyCard" style={{cursor: 'pointer'}}>
             <Card.Img src={link + prod.image[0]} />
+            <div className="myButmda">
+                <Link to={{pathname:`/products/${prod.id}/`}}>
+                    <Button className="m-2"  size="lg" variant="light" style={{width:"180px",  fontSize: '14px'}}>DETAIL</Button>
+                </Link>
+            </div>
             <Card.Body>
                 <Card.Title>{prod.name}</Card.Title>
                 <Card.Text>${prod.price}</Card.Text>
-                <Link to={{pathname:`/products/${prod.id}/`}}>Detail</Link>
             </Card.Body>
         </Card>
     ))

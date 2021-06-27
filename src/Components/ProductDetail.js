@@ -25,20 +25,19 @@ function ProductDetail({ match }) {
     if(product.image){
         return(
             <Container>
-                <div style={{display:"flex"}}>
-                    <Carousel fade className="w-50">
+                    <Carousel fade >
                         <Carousel.Item>
-                            <img className="d-block" style={{width:"568px", height:"568px"}}
+                            <img className="d-block" style={{width:"100%", height:"auto"}}
                                 src={link + product.image[0]}
                             />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img className="d-block"  style={{width:"568px", height:"568px"}}
+                            <img className="d-block"  style={{width:"100%", height:"auto"}}
                                 src={link + product.image[1]}
                             />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img className="d-block"  style={{width:"568px", height:"568px"}}
+                            <img className="d-block"  style={{width:"100%", height:"auto"}}
                                 src={link + product.image[2]}
                             />
                         </Carousel.Item>
@@ -50,7 +49,6 @@ function ProductDetail({ match }) {
                         <Button variant="dark" className="rounded-0 btn-lg">ADD TO CARD</Button>
                     </div>
 
-                </div>
                 <div className="m-5">
                     <p>New Arrivals</p>
                     <NewProduct />

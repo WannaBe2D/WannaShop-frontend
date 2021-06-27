@@ -21,7 +21,7 @@ function About() {
         }).catch((error) =>{
             history.push("/login")
         })
-    })
+    }, [])
 
     const logout = () => {
         axios.get('http://127.0.0.1:8000/api/logout/',
