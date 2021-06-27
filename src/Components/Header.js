@@ -26,7 +26,7 @@ export default class Header extends Component {
                     </Navbar.Brand>
                         <Nav>
                             <Navbar.Collapse id="responsive-navbar-nav2">
-                                <Nav.Link className="text-secondary" href="/auth">Account</Nav.Link>
+                                <Nav.Link className="text-secondary" href="/profile">Account</Nav.Link>
                                 <Nav.Link className="text-secondary" href="#features">Cart</Nav.Link>
                             </Navbar.Collapse>
                         </Nav>
