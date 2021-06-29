@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Card, Row, Container, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-function AllProducts() {
+function AllProductsW() {
 //<Link to={{pathname:`/products/${prod.id}/`}}>Detail</Link>
     const [products, setProducts] = useState([])
 
@@ -13,6 +13,7 @@ function AllProducts() {
             url: `http://localhost:8000/api/products/`
         }).then(response => {
             setProducts(response.data)
+            console.log(response.data)
         })
     }, [])
 
@@ -22,7 +23,7 @@ function AllProducts() {
         return <div>loading...</div>
     }
     const productJSX = products.map((prod, i) =>(
-        prod.sex == "M" ?
+        prod.sex == "W" ?
         <Card key={i} className="border-0 col-lg-3 col-md-4 col-sm-5 showMyCard">
             <Card.Img src={link + prod.image[0]} />
             <div className="myButmda">
@@ -48,4 +49,4 @@ function AllProducts() {
     )
 }
 
-export default AllProducts;
+export default AllProductsW;

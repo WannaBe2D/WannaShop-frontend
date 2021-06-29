@@ -8,6 +8,8 @@ import Auth from '../Pages/Auth';
 import Reg from '../Pages/Register';
 import Profile from '../Pages/Profile';
 import Cart from '../Pages/Cart';
+import Checkout from './Order/Checkout';
+import CheckoutDetail from './Order/CheckoutDetail';
 
 export default class Header extends Component {
     render(){
@@ -43,6 +45,8 @@ export default class Header extends Component {
                         <Route exact path="/register" component={Reg} />
                         <Route exact path="/profile" component={Profile} />
                         <Route exact path="/cart" component={Cart} />
+                        <Route exact path="/checkout" component={Checkout} />
+                        <Route path="/checkout/:id/" exact component={CheckoutDetail} /> 
                     </Switch>
                 </Router>
             </div>

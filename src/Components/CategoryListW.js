@@ -1,20 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Card, Row, Container, Button } from 'react-bootstrap';
+import { Container, Row, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-function AllProducts() {
-//<Link to={{pathname:`/products/${prod.id}/`}}>Detail</Link>
+function CategoryList({ match }) {
+
+    const [category, setCategory] = useState({})
+    const id = match.params.id
     const [products, setProducts] = useState([])
 
     useEffect(() => {
         axios({
             method: "GET",
-            url: `http://localhost:8000/api/products/`
+            url: `http://localhost:8000/api/categories/${id}/`,
         }).then(response => {
-            setProducts(response.data)
+            setCategory(response.data)
+            setProducts(response.data.products)
         })
-    }, [])
+    }, [id])
 
     let link = 'http://127.0.0.1:8000'
     console.log(products)
@@ -22,7 +25,7 @@ function AllProducts() {
         return <div>loading...</div>
     }
     const productJSX = products.map((prod, i) =>(
-        prod.sex == "M" ?
+        prod.sex == "W" ?
         <Card key={i} className="border-0 col-lg-3 col-md-4 col-sm-5 showMyCard">
             <Card.Img src={link + prod.image[0]} />
             <div className="myButmda">
@@ -39,8 +42,9 @@ function AllProducts() {
         <div key={i}></div>
     ))
 
-    return (
+    return(
         <Container>
+            <h3>{category.name}</h3>
             <Row className="mt-4">
                 {productJSX}
             </Row>
@@ -48,4 +52,4 @@ function AllProducts() {
     )
 }
 
-export default AllProducts;
+export default CategoryList;

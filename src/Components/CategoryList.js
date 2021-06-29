@@ -25,6 +25,7 @@ function CategoryList({ match }) {
         return <div>loading...</div>
     }
     const productJSX = products.map((prod, i) =>(
+        prod.sex == "M" ?
         <Card key={i} className="border-0 col-lg-3 col-md-4 col-sm-5 showMyCard">
             <Card.Img src={link + prod.image[0]} />
             <div className="myButmda">
@@ -37,6 +38,8 @@ function CategoryList({ match }) {
                 <Card.Text>${prod.price}</Card.Text>
             </Card.Body>
         </Card>
+        :
+        <div key={i}></div>
     ))
 
     return(

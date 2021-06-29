@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import cardImg1 from '/home/andrei/www/wannaShopFrontend/wanna-frontend/src/Assets/Block.png'
 import { Container, Image, Form, Button } from 'react-bootstrap';
+import { Link, useHistory } from 'react-router-dom';
 
 
 function Basket() {
+    const history = useHistory()
     const[items, setItems] = useState({})
 
     const token = localStorage.getItem("Token")
@@ -23,7 +24,14 @@ function Basket() {
         fetchData()
     }, [])
 
-    console.log(items.products)
+    const handleCheckout = () => {
+        axios.get('http://localhost:8000/api/add_item_to_order/',
+        config
+        ).then((response) => {
+            history.push("/checkout")
+        })
+    }
+
 
     let link = 'http://127.0.0.1:8000'
     if(items.products){
@@ -79,7 +87,7 @@ function Basket() {
                     <p>price</p>
                 </Container>
 
-                <Button className="w-50 mt-5 mb-5" style={{background: "#595CFF", borderColor: "#595CFF"}}>Checkout</Button>
+                <Button onClick={handleCheckout} className="w-50 mt-5 mb-5" style={{background: "#595CFF", borderColor: "#595CFF"}}>Checkout</Button>
             </Container>
         </div>
         )
